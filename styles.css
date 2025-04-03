@@ -1,0 +1,401 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background: #f5f7fa;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Error and Success Messages */
+  .error-message {
+    color: #ff4444;
+    margin-top: 10px;
+    font-size: 0.9rem;
+  }
+  
+  .success-message {
+    color: #00C851;
+    margin-top: 10px;
+    font-size: 0.9rem;
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .nav-links a:hover {
+    color: #ff6f61;
+  }
+  
+  .nav-links .btn {
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+  }
+  
+  /* Home Section */
+  .home-section {
+    background: url('./gym.jpg') no-repeat center center/cover;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .home-section h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .home-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Animation Effects */
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .slide-in {
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideIn 1s ease-in forwards;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* About Section */
+  .about-section {
+    background: #fff;
+    padding: 6rem 0;
+  }
+  
+  .about-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  .about-card {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .about-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .about-card i {
+    font-size: 2rem;
+    color: #ff6f61;
+  }
+  
+  .about-card h3 {
+    margin: 1rem 0;
+  }
+  
+  .about-card p {
+    color: #666;
+  }
+  
+  /* Workouts Section */
+  .workouts-section {
+    background: #f8f9fa;
+    padding: 6rem 0;
+  }
+  
+  .workout-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  .card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .card h3 {
+    margin: 1rem 0;
+  }
+  
+  .card p {
+    color: #666;
+  }
+  
+  .btn-card {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #ff6f61;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+  }
+  
+  .btn-card:hover {
+    background: #ff4a3d;
+  }
+  
+  /* Nutrition Section */
+  .nutrition-section {
+    background: #fff;
+    padding: 6rem 0;
+  }
+  
+  .nutrition-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  .calorie-tracker, .meal-planner {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 45%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .calorie-tracker input {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .calorie-tracker button {
+    margin: 0.5rem 0.5rem 0.5rem 0;
+  }
+  
+  /* Testimonials Section */
+  .testimonials-section {
+    background: #f8f9fa;
+    padding: 6rem 0;
+  }
+  
+  .testimonial-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  .testimonial-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .testimonial-card p {
+    font-style: italic;
+    color: #666;
+  }
+  
+  .testimonial-card h4 {
+    margin-top: 1rem;
+    color: #333;
+  }
+  
+  /* Contact Section */
+  .contact-section {
+    background: #fff;
+    padding: 6rem 0;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .contact-form input, .contact-form textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contact-form textarea {
+    resize: vertical;
+    height: 150px;
+  }
+  
+  /* Footer */
+  .footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+  }
+  
+  .social-links {
+    margin-top: 1rem;
+  }
+  
+  .social-links a {
+    color: #fff;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .social-links a:hover {
+    color: #ff6f61;
+  }
+  
+  /* Modal Styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .modal-content h2 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .modal-content input {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .modal-content button {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 1rem;
+  }
+  
+  .close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .close:hover {
+    color: #ff6f61;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .workout-cards, .about-content, .testimonial-cards {
+      flex-direction: column;
+    }
+  
+    .card, .about-card, .testimonial-card, .calorie-tracker, .meal-planner {
+      width: 100%;
+    }
+    
+    .nav-links {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .nav-links li {
+      margin: 0.5rem 0;
+    }
+  }
